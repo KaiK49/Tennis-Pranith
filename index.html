@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,52 +10,71 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Roboto', sans-serif; background-color: #f4f4f9; color: #333; }
 
-    /* Header styling */
+    /* Fixed Header styling */
     header {
       background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      padding: 20px 40px;
+      padding: 15px 40px;
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      z-index: 1000;
     }
-    header h1 { font-size: 2.5rem; color: #fff; }
-    nav a { color: #fff; margin-left: 20px; text-decoration: none; font-weight: bold; }
+    header h1 { font-size: 2rem; color: #fff; }
+    nav a {
+      color: #fff;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    /* Space below fixed header */
+    .spacer { height: 60px; }
 
-    /* Hero section with direct image element */
+    /* Hero section */
     .hero {
-      text-align: center;
-      margin-bottom: 40px;
       position: relative;
+      text-align: center;
+      overflow: hidden;
     }
     .hero-image {
       width: 100%;
-      height: auto;
+      height: 400px;
+      object-fit: cover;
       display: block;
     }
     .hero-content {
+      position: absolute;
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%);
       background: rgba(0, 0, 0, 0.6);
-      display: inline-block;
-      padding: 20px;
       color: #fff;
-      margin-top: -100px;
-      border-radius: 10px;
-      position: relative;
-      z-index: 1;
+      padding: 20px 30px;
+      border-radius: 8px;
+      text-align: center;
     }
-    .hero-content h2 { font-size: 3rem; margin-bottom: 10px; }
-    .hero-content p { font-size: 1.2rem; max-width: 600px; margin: auto; }
+    .hero-content h2 { font-size: 2.5rem; margin-bottom: 10px; }
+    .hero-content p { font-size: 1.1rem; max-width: 600px; margin: auto; }
 
     /* Section styling */
     .section { padding: 60px 40px; max-width: 1000px; margin: auto; }
-    .section h3 { font-size: 2rem; margin-bottom: 20px; color: #2c5364; }
-    .section p { font-size: 1.1rem; line-height: 1.6; }
+    .section h3 { font-size: 2rem; margin-bottom: 20px; color: #203a43; }
+    .section p, .section ul { font-size: 1.1rem; line-height: 1.6; }
     .section ul { list-style: disc inside; margin-top: 10px; }
     .section ul li { margin-bottom: 8px; }
 
+    /* Testimonials styling */
+    .testimonials blockquote {
+      font-style: italic;
+      margin: 20px 0;
+      padding-left: 15px;
+      border-left: 4px solid #2c5364;
+    }
+
     /* Contact form styling */
     .contact-form { background-color: #e0eafc; padding: 40px; border-radius: 10px; margin-top: 30px; }
-    .contact-form input,
-    .contact-form textarea {
+    .contact-form input, .contact-form textarea {
       width: 100%; padding: 10px; margin-bottom: 20px; border-radius: 5px; border: 1px solid #ccc;
     }
     .contact-form button {
@@ -68,7 +86,6 @@
     footer { background-color: #2c5364; color: #fff; text-align: center; padding: 20px; margin-top: 40px; }
   </style>
 </head>
-
 <body>
   <header>
     <h1>Pranith Sepuri Tennis</h1>
@@ -76,42 +93,69 @@
       <a href="#about">About</a>
       <a href="#lessons">Lessons</a>
       <a href="#benefits">Why Choose</a>
+      <a href="#schedule">Schedule & Pricing</a>
+      <a href="#testimonials">Testimonials</a>
       <a href="#contact">Contact</a>
     </nav>
   </header>
 
+  <!-- Spacer to offset fixed header -->
+  <div class="spacer"></div>
+
   <section class="hero">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4a/Tennis_Rackets.jpg/1200px-Tennis_Rackets.jpg" alt="Tennis Rackets" class="hero-image">
+    <img src="https://source.unsplash.com/1600x400/?tennis" alt="Tennis Court" class="hero-image">
     <div class="hero-content">
       <h2>Train with a Tennis Pro</h2>
-      <p>Join Pranith Sepuri's tennis lessons and master the game with expert techniques, personalized guidance, and passion-driven training.</p>
+      <p>Join Pranith Sepuri's tennis lessons and elevate your game with expert coaching, personalized drills, and a community of passionate players.</p>
     </div>
   </section>
 
   <section class="section" id="about">
     <h3>About Pranith Sepuri</h3>
-    <p>With over 15 years of tennis experience and numerous local championships under his belt, Pranith Sepuri brings unmatched expertise and enthusiasm to each lesson. Whether you're a beginner or an aspiring competitor, his coaching approach is tailored to help you grow fast and love the sport.</p>
+    <p>With 15+ years of competitive experience and coaching certifications, Pranith has helped hundreds of players improve their technique, strategy, and confidence on the court.</p>
   </section>
 
   <section class="section" id="lessons">
     <h3>Lesson Options</h3>
-    <p>Pranith offers private sessions, group training, and weekend clinics. Lessons are designed to improve your technique, footwork, and game strategy in a fun and supportive environment. Equipment is provided if needed!</p>
+    <ul>
+      <li><strong>Private Sessions:</strong> One-on-one coaching tailored to your skill level.</li>
+      <li><strong>Group Clinics:</strong> Small groups for drills, match play, and fitness.</li>
+      <li><strong>Junior Programs:</strong> Fun and educational lessons for ages 7–14.</li>
+      <li><strong>Match Play Coaching:</strong> Tactical insights during real-game scenarios.</li>
+    </ul>
   </section>
 
   <section class="section" id="benefits">
     <h3>Why Choose Pranith?</h3>
     <ul>
-      <li>Personalized training plans tailored to your goals</li>
-      <li>Proven track record of skill improvement</li>
-      <li>State-of-the-art courts and equipment</li>
-      <li>Flexible scheduling to fit your lifestyle</li>
+      <li>Customized training plans to fit your goals</li>
+      <li>Proven success in local and regional tournaments</li>
+      <li>Access to premier courts and equipment</li>
+      <li>Flexible scheduling for busy lifestyles</li>
     </ul>
   </section>
 
+  <section class="section" id="schedule">
+    <h3>Schedule & Pricing</h3>
+    <p>Sessions available Monday–Saturday at Sunrise Tennis Club:</p>
+    <ul>
+      <li><strong>Private:</strong> $60/hr</li>
+      <li><strong>Group (2–4 players):</strong> $25/player/hr</li>
+      <li><strong>Weekend Clinics:</strong> $40 per session</li>
+    </ul>
+  </section>
+
+  <section class="section" id="testimonials">
+    <h3>Testimonials</h3>
+    <div class="testimonials">
+      <blockquote>"Pranith's coaching transformed my serve! I see results after just three lessons." — Alex G.</blockquote>
+      <blockquote>"Friendly, motivational, and knowledgeable — best tennis coach I've worked with." — Sara L.</blockquote>
+    </div>
+  </section>
+
   <section class="section" id="contact">
-    <h3>Contact &amp; Sign Up</h3>
+    <h3>Contact & Sign Up</h3>
     <div class="contact-form">
-      <!-- Direct email via mailto link -->
       <form action="mailto:kaikalaria@gmail.com" method="post" enctype="text/plain">
         <input type="text" name="Name" placeholder="Your Name" required>
         <input type="email" name="Email" placeholder="Your Email" required>
@@ -125,12 +169,4 @@
     &copy; 2025 Pranith Sepuri Tennis Lessons. All rights reserved.
   </footer>
 </body>
-
 </html>
-
-
-
-
-
-
-
