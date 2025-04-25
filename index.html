@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pranith Sepuri Tennis Lessons</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+    }
+
+    header {
+      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      background-image: url('https://images.unsplash.com/photo-1517649763962-0c623066013b?fit=crop&w=1350&q=80');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 100px 40px;
+      text-align: center;
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .section {
+      padding: 60px 40px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h3 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #2c5364;
+    }
+
+    .section p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    .contact-form {
+      background-color: #e0eafc;
+      padding: 40px;
+      border-radius: 10px;
+      margin-top: 30px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    .contact-form button {
+      background-color: #2c5364;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    footer {
+      background-color: #2c5364;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Pranith Sepuri Tennis</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#lessons">Lessons</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Train with a Tennis Pro</h2>
+    <p>Join Pranith Sepuri's tennis lessons and master the game with expert techniques, personalized guidance, and passion-driven training.</p>
+  </section>
+
+  <section class="section" id="about">
+    <h3>About Pranith Sepuri</h3>
+    <p>With over 15 years of tennis experience and numerous local championships under his belt, Pranith Sepuri brings unmatched expertise and enthusiasm to each lesson. Whether you're a beginner or an aspiring competitor, his coaching approach is tailored to help you grow fast and love the sport.</p>
+  </section>
+
+  <section class="section" id="lessons">
+    <h3>Lesson Options</h3>
+    <p>Pranith offers private sessions, group training, and weekend clinics. Lessons are designed to improve your technique, footwork, and game strategy in a fun and supportive environment. Equipment is provided if needed!</p>
+  </section>
+
+  <section class="section" id="contact">
+    <h3>Contact & Sign Up</h3>
+    <div class="contact-form">
+      <form id="lessonForm">
+        <input type="text" id="name" placeholder="Your Name" required />
+        <input type="email" id="email" placeholder="Your Email" required />
+        <textarea id="message" rows="5" placeholder="Tell us your skill level or questions..."></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Pranith Sepuri Tennis Lessons. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('lessonForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      alert('Thank you for contacting Pranith! We will be in touch soon.');
+    });
+  </script>
+</body>
+
+</html>
