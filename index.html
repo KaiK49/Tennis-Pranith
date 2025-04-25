@@ -30,6 +30,7 @@
 
     header h1 {
       font-size: 2.5rem;
+      color: white; /* Fixed white text color */
     }
 
     nav a {
@@ -40,7 +41,7 @@
     }
 
     .hero {
-      background-image: url('https://images.unsplash.com/photo-1521818594035-800def02d179?crop=entropy&cs=tinysrgb&fit=max&ixid=MnwzNjUyOXwwfDF8c2VhcmNofDJ8fHRlbm5pc3xlbnwwfDJ8fDE2NjA5MTMwNzI&ixlib=rb-1.2.1&q=80&w=1080');
+      background-image: url('https://images.unsplash.com/photo-1521791194787-e1ff9c0c0001'); /* Tennis-themed image */
       background-size: cover;
       background-position: center;
       color: white;
@@ -153,6 +154,7 @@
     &copy; 2025 Pranith Sepuri Tennis Lessons. All rights reserved.
   </footer>
 
+  <!-- EmailJS Integration -->
   <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
     (function () {
@@ -168,7 +170,7 @@
         message: document.getElementById('message').value
       };
 
-      emailjs.send('service_xxxxx', 'template_xxxxx', templateParams)
+      emailjs.send('service_xxxxx', 'template_xxxxx', templateParams)  // Replace with your service and template IDs
         .then(function (response) {
           alert('Thank you for contacting Pranith! We will be in touch soon.');
         }, function (error) {
