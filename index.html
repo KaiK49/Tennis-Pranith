@@ -153,10 +153,27 @@
     &copy; 2025 Pranith Sepuri Tennis Lessons. All rights reserved.
   </footer>
 
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
   <script>
+    (function () {
+      emailjs.init("user_1234567890"); // Replace with your EmailJS user ID
+    })();
+
     document.getElementById('lessonForm').addEventListener('submit', function (e) {
       e.preventDefault();
-      alert('Thank you for contacting Pranith! We will be in touch soon.');
+
+      var templateParams = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        message: document.getElementById('message').value
+      };
+
+      emailjs.send('service_xxxxx', 'template_xxxxx', templateParams)
+        .then(function (response) {
+          alert('Thank you for contacting Pranith! We will be in touch soon.');
+        }, function (error) {
+          alert('Failed to send message. Please try again later.');
+        });
     });
   </script>
 </body>
