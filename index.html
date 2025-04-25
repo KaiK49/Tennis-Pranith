@@ -26,6 +26,11 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
     }
 
     header h1 {
@@ -37,6 +42,10 @@
       margin-left: 20px;
       text-decoration: none;
       font-weight: bold;
+    }
+
+    .spacer {
+      height: 80px;
     }
 
     .hero {
@@ -133,6 +142,8 @@
     </nav>
   </header>
 
+  <div class="spacer"></div>
+
   <section class="hero">
     <img src="https://images.squarespace-cdn.com/content/v1/542e007be4b08e60716458a7/1586087778278-KQ4TF2PPLCCGP1259VQ7/polmans+fh.jpeg?format=2500w" alt="Tennis lesson">
     <h2>Train with a Tennis Pro</h2>
@@ -183,3 +194,4 @@
 </body>
 
 </html>
+
